@@ -5,7 +5,9 @@ export default {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   mode: 'jit',
-  purge: ['./src/**/*.{js,jsx,ts,tsx}', './public/index.html'],
+  purge: {
+    content: ['./src/**/*.{js,jsx,ts,tsx}', './index.html'],
+  },
   theme: {
     extend: {},
   },
