@@ -1,0 +1,34 @@
+
+.menu {
+    @apply flex items-center justify-between flex-wrap bg-transparent p-6 text-left md:text-center fixed w-full;
+  }
+  .logo {
+    @apply flex items-center flex-shrink-0 text-black mr-6;
+  }
+  .menu-button {
+    @apply bg-transparent cursor-pointer text-2xl border-[none] md:hidden;
+  }
+  .menu-button span {
+    @apply text-[black];
+  }
+  .menu-button.close span {
+    @apply text-[black] absolute top-6 right-6;
+  }
+  .menu-overlay {
+    @apply fixed w-full h-0 bg-[white] transition-[height] duration-[0.5s] ease-[ease] overflow-hidden right-0 top-0;
+  }
+  .menu-overlay.open {
+    @apply h-full p-8;
+  }
+  .overlay-links {
+    @apply absolute -translate-x-2/4 -translate-y-2/4 left-2/4 top-1/4;
+  }
+  .overlay-links a {
+    @apply block text-center text-[black] no-underline mx-0 my-2.5 text-lg	tracking-widest	;
+  }
+  .nav-link{
+    @apply block mt-4 md:inline-block md:mt-0  mr-16;
+  }
+  .desktop-nav{
+    @apply hidden md:block w-[calc(100%-148px)];
+  }
