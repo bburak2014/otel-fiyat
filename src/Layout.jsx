@@ -1,5 +1,5 @@
-import { Header } from "./components/header/Header"
-import Footer from "./components/footer/Footer"
+import { Header } from "./components/main/header/Header"
+import Footer from "./components/main/footer/Footer"
 
  const Layout = ({children}) => {
   return (
