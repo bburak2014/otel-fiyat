@@ -1,10 +1,9 @@
+import Slide from "../../components/ui/slide/Slide"
+
  
 const Home = () => {
   return (
-    <div>
-        
-        
-     </div>
+    <Slide/>
   )
 }
 

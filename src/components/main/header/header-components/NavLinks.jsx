@@ -1,4 +1,4 @@
-import { Link, useLocation } from "react-router-dom"
+import { Link } from "react-router-dom"
 import "../header.css"
 
 const links = [{
@@ -14,8 +14,7 @@ const links = [{
     path: "/contact"
 }]
 
-export const Navlinks = () => {
-    const { pathname } = useLocation()
+export const Navlinks = ({pathname}) => {
     return (
         <nav>{links.map((link, index) =>
             <Link className={`nav-link  ${pathname === link.path ? "text-black font-medium" : "text-[#626262]"}`} key={index} to={link.path}>{link.name}</Link>)}

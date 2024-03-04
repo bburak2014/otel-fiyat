@@ -1,6 +1,6 @@
 
 .menu {
-    @apply flex items-center justify-between flex-wrap bg-transparent p-6 text-left md:text-center fixed w-full;
+    @apply flex items-center justify-between flex-wrap bg-[#ffffffd1] px-6 py-2 text-left md:text-center fixed w-full z-10  cursor-pointer;
   }
   .logo {
     @apply flex items-center flex-shrink-0 text-black mr-6;
