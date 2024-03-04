@@ -1,17 +1,20 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Navlinks } from "./header-components/NavLinks"
-import { Link } from "react-router-dom"
+import { Link, useLocation } from "react-router-dom"
 import "./header.css"
 
 export const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const { pathname } = useLocation();
+
+  useEffect(() => { setIsOpen(false) }, [pathname])
 
   return (
 
     <div className="menu">
       <div className="logo"><Link to="/"><img src="logo.png" alt="logo" /> </Link></div>
       <div className="desktop-nav">
-        <Navlinks />
+        <Navlinks pathname={pathname} />
       </div>
       <button onClick={() => setIsOpen(!isOpen)} className={`menu-button ${isOpen ? "close" : "open"}`}>
         <span>&#9776;</span>
@@ -22,7 +25,7 @@ export const Header = () => {
         </button>
 
         <div className="overlay-links">
-          <Navlinks />
+          <Navlinks pathname={pathname} />
         </div>
       </div>
     </div>
