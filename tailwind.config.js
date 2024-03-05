@@ -5,6 +5,7 @@ export default {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   mode: 'jit',
+  important: true,
   theme: {
     extend: {
       keyframes:{
@@ -27,11 +28,17 @@ export default {
             opacity:"1",
             transform:"translateX(0)"
           },
+        },
+        wiggle: {
+          '0%, 100%': { transform: 'rotate(-3deg)' },
+          '50%': { transform: 'rotate(3deg)' },
         }
       },
       animation:{
         slidein:"slidein 1s ease 500ms",
-        slideinText:"slideinText 1s  ease-out 700ms"
+        slideinText:"slideinText 1s  ease-out 700ms",
+        wiggle: 'wiggle 0.2s 700  ease-in-out  ',
+
 
       }
     },
